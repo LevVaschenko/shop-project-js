@@ -91,5 +91,5 @@ body {
 .menu a:hover {
     background-color: #2c71b8;
     color: white;
-    transition: 0.2s all ease-in-out;
+    transition: 0.25s all ease-in-out;
 }
