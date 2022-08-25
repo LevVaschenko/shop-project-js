@@ -93,3 +93,7 @@ body {
     color: white;
     transition: 0.25s all ease-in-out;
 }
+
+.logo {
+    padding-left: 50px;
+}
