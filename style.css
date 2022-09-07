@@ -390,7 +390,7 @@ input[type="checkbox"]:checked + label::before {
     width: 270px;
     height: 180px;
     background: rgb(255, 255, 255, 0.7) url(./images/product-1.png) no-repeat center;
-    position: static;
+    position: relative;
 }
 
 .zoom {
@@ -398,8 +398,8 @@ input[type="checkbox"]:checked + label::before {
     height: 30px;
     padding: 4px;
     background: url(./images/zoom.png) no-repeat center;
-    right: -225px;
-    position: relative;
+    right: 10px;
+    position: absolute;
     border: 1px solid #2c71b8;
     top: 10px;
     cursor: pointer;
@@ -410,8 +410,7 @@ input[type="checkbox"]:checked + label::before {
     height: 30px;
     padding: 4px;
     background: url(./images/zoom-hover.png) no-repeat center;
-    right: -225px;
-    position: relative;
+    right: 10px;
     border: 1px solid #2c71b8;
     background-color: #2c71b8;
     top: 10px;
@@ -424,8 +423,8 @@ input[type="checkbox"]:checked + label::before {
     height: 30px;
     padding: 4px;
     background: url(./images/like.png) no-repeat center;
-    right: -190px;
-    position: relative;
+    right: 10px;
+    position: absolute;
     border: 1px solid #2c71b8;
     cursor: pointer;
     top: 50px;
@@ -436,13 +435,13 @@ input[type="checkbox"]:checked + label::before {
     height: 30px;
     padding: 4px;
     background: url(./images/like-hover.png) no-repeat center;
-    right: -190px;
-    position: relative;
+    right: 10px;
     border: 1px solid #2c71b8;
     background-color: #2c71b8;
     cursor: pointer;
     top: 50px;
     transition: 0.2s all ease-in-out;
+    z-index: 3;
 }
 
 .description {
@@ -571,42 +570,42 @@ number {
     width: 270px;
     height: 180px;
     background: rgb(255, 255, 255, 0.7) url(./images/product-2.png) no-repeat center;
-    position: static;
+    position: relative;
 }
 
 .product-image3 {
     width: 270px;
     height: 180px;
     background: rgb(255, 255, 255, 0.7) url(./images/product-3.png) no-repeat center;
-    position: static;
+    position: relative;
 }
 
 .product-image4 {
     width: 270px;
     height: 180px;
     background: rgb(255, 255, 255, 0.7) url(./images/product-4.png) no-repeat center;
-    position: static;
+    position: relative;
 }
 
 .product-image5 {
     width: 270px;
     height: 180px;
     background: rgb(255, 255, 255, 0.7) url(./images/product-5.png) no-repeat center;
-    position: static;
+    position: relative;
 }
 
 .product-image6 {
     width: 270px;
     height: 180px;
     background: rgb(255, 255, 255, 0.7) url(./images/product-6.png) no-repeat center;
-    position: static;
+    position: relative;
 }
 
 .product-image7 {
     width: 270px;
     height: 180px;
     background: rgb(255, 255, 255, 0.7) url(./images/product-7.png) no-repeat center;
-    position: static;
+    position: relative;
 }
 
 .load {
