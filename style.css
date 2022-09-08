@@ -351,6 +351,7 @@ input[type="checkbox"]:checked + label::before {
     font-weight: lighter;
     background: url(./images/arrow-down.png) no-repeat right;
     background-size: 10px 10px;
+    z-index: 3;
 }
 
 .sort-settings {
@@ -360,6 +361,7 @@ input[type="checkbox"]:checked + label::before {
 .dropdown {
     position: relative;
     display: inline-block;
+    z-index: 3;
 }
 
 .dropdown-child {
@@ -370,6 +372,7 @@ input[type="checkbox"]:checked + label::before {
     border: 1px solid white;
     font-size: 21px;
     font-weight: lighter;
+    z-index: 3;
 }
 
 .dropdown-child a {
@@ -380,6 +383,7 @@ input[type="checkbox"]:checked + label::before {
     border-bottom: 0.5px solid white;
     padding-bottom: 15px;
     padding-top: 15px;
+    z-index: 3;
 }
 
 .dropdown:hover .dropdown-child {
