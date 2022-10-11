@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Project</title>
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,7 +26,18 @@
                     <nav>
                         <ul class="menu">
                             <li><a href="">Home</a></li>
-                            <li><a href="">Products</a></li>
+                            <div class="dropdown-products">
+                                <li class="mainmenubtn"><a href="">Products</a></li>
+                                <div class="dropdown-children">
+                                    <a href="">Lorem ipsum dolor</a>
+                                    <a href="">Sit amet</a>
+                                    <a href="">Consectetur adipisicing</a>
+                                    <a href="">Tempor incididunt</a>
+                                    <a href="">Dolore magna aliqua</a>
+                                    <a href="">Ut enim ad minim veniam</a>
+                                    <a href="">Quis nostrud</a>
+                                </div>
+                            </div>
                             <li><a href="">Payment</a></li>
                             <li><a href="">Shipping</a></li>
                         </ul>
@@ -39,7 +53,7 @@
                         </div>
                         <div class="col-3">
                             <div class="cart-header">
-                                <div class="product-counter">4</div>
+                                <div class="product-counter" id="products-count">0</div>
                             </div>
                         </div>
                     </div>
@@ -47,9 +61,15 @@
             </div>
         </div>
     </header>
-        <div class="slider">
-            <div class="slider-text">
-            Slide
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="slider">
+                        <div>Slide 1</div>
+                        <div>Slide 2</div>
+                        <div>Slide 3</div>
+                    </div>
+                </div>
             </div>
         </div>
       <main class="main">
@@ -134,7 +154,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" data-aos="fade-down-left">
                         <div class="col-4">
                             <div class="product-image">
                                 <img src="" alt="">
@@ -330,7 +350,27 @@
     </div>
     </main>
     <footer class="footer">
-        © Copyright 2017
+        © Copyright 2022
     </footer>
+
+    <div class="modal hide">
+        <div class="modal-block">
+            <form action="">
+                <div class="buttonClose">X</div>
+                <div class="clear"></div>
+                <h3>Please call for more details</h3>
+                <div class="form-field">
+                    <input type="text" placeholder="Your name">
+                </div>
+                <div class="form-field"><input type="text" placeholder="Your phone"></div>
+                <button>Please call</button>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
