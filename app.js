@@ -123,7 +123,7 @@ function Counter(incrementButton, decrementButton, inputField, minCount = 1, max
         this.domRefs.inputField.value = +this.domRefs.inputField.value - 1;
         this.toggleButtonState();
     }
-    console.log(this);
+    // console.log(this);
 
     this.domRefs.incrementButton.addEventListener("click", this.increment.bind(this));
     this.domRefs.decrementButton.addEventListener("click", this.decrement.bind(this));
@@ -136,4 +136,54 @@ let counter1 = new Counter(
     productQuantity[0],
 )
 
-console.log(counter1)
+let counter2 = new Counter(
+    incrementButtons[1],
+    decrementButtons[1],
+    productQuantity[1],
+)
+
+let counter3 = new Counter(
+    incrementButtons[2],
+    decrementButtons[2],
+    productQuantity[2],
+)
+
+let counter4 = new Counter(
+    incrementButtons[3],
+    decrementButtons[3],
+    productQuantity[3],
+)
+
+let counter5 = new Counter(
+    incrementButtons[4],
+    decrementButtons[4],
+    productQuantity[4],
+)
+
+let counter6 = new Counter(
+    incrementButtons[5],
+    decrementButtons[5],
+    productQuantity[5],
+)
+
+let counter7 = new Counter(
+    incrementButtons[6],
+    decrementButtons[6],
+    productQuantity[6],
+)
+
+let counter8 = new Counter(
+    incrementButtons[7],
+    decrementButtons[7],
+    productQuantity[7],
+)
+
+let counter9 = new Counter(
+    incrementButtons[8],
+    decrementButtons[8],
+    productQuantity[8],
+)
+
+
+
+// console.log(counter1)

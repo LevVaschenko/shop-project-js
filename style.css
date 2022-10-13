@@ -774,5 +774,5 @@ input[type="slick-dots"]:checked + label::before {
 }
 
 .description {
-    height: 500px;
+    height: 510px;
 }
