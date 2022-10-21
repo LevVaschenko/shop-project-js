@@ -99,91 +99,62 @@ let incrementButtons = document.querySelectorAll(".increment")
 let decrementButtons = document.querySelectorAll(".decrement")
 let productQuantity = document.querySelectorAll(".product-quantity input")
 
-function Counter(incrementButton, decrementButton, inputField, minCount = 1, maxCount = 5) {
-    this.domRefs = { // объект, который будет иметь ссылку на dom элемент
+function Counter(incrementButton, decrementButton, inputField, minCount = 1, maxCount = 5) { // функция конструктор, которая принимает информацию по кнопкам инкремент, декремент, полю (input) и задаём информацию по минимальному и максимальному значению
+    this.domRefs = { // объект, который будет иметь ссылку на dom элемент (запись данных функции в объект)
         incrementButton,
         decrementButton,
         inputField,
     };
-    this.toggleButtonState = function () {
-        let count = this.domRefs.inputField.value;
-        this.domRefs.decrementButton.disabled = count <= minCount;
-        this.domRefs.incrementButton.disabled = count >= maxCount;
+    this.toggleButtonState = function () { // метод отключения кнопки минус и плюс, если они заходят в минимум или максимум
+        let count = this.domRefs.inputField.value; // записываем в count значение input
+        this.domRefs.decrementButton.disabled = count <= minCount; // отключаем минус, если он доходит до минимума
+        this.domRefs.incrementButton.disabled = count >= maxCount; // отключаем плюс, если он доходит до максимума
     }
 
-    this.toggleButtonState();
+    this.toggleButtonState(); // вызываем функцию отключения
 
-    this.increment = function() {
-        console.log(this);
-        this.domRefs.inputField.value = +this.domRefs.inputField.value + 1;
-        this.toggleButtonState();
+    this.increment = function() { // функция инкремент увеличивает значение input на 1 при нажатии на плюс
+        this.domRefs.inputField.value = +this.domRefs.inputField.value + 1; // при нажатии на плюс увеличивает значение input на 1
+        this.toggleButtonState(); // проверка, является ли значение минимальным или максимальным
     }
 
-    this.decrement = function() {
-        this.domRefs.inputField.value = +this.domRefs.inputField.value - 1;
-        this.toggleButtonState();
+    this.decrement = function() { // функция декремент уменьшает значение input на 1 при нажатии на минус
+        this.domRefs.inputField.value = +this.domRefs.inputField.value - 1; // при нажатии на минус уменьшает значение input на 1
+        this.toggleButtonState(); // проверка, является ли значение минимальным или максимальным
     }
-    // console.log(this);
 
-    this.domRefs.incrementButton.addEventListener("click", this.increment.bind(this));
-    this.domRefs.decrementButton.addEventListener("click", this.decrement.bind(this));
+    this.domRefs.incrementButton.addEventListener("click", this.increment.bind(this)); // при нажатии на плюс запускаем функцию инкремент
+    this.domRefs.decrementButton.addEventListener("click", this.decrement.bind(this)); // при нажатии на минус запускаем функцию декремент
 }
 
 
-let counter1 = new Counter(
-    incrementButtons[0],
-    decrementButtons[0],
-    productQuantity[0],
-)
-
-let counter2 = new Counter(
-    incrementButtons[1],
-    decrementButtons[1],
-    productQuantity[1],
-)
-
-let counter3 = new Counter(
-    incrementButtons[2],
-    decrementButtons[2],
-    productQuantity[2],
-)
-
-let counter4 = new Counter(
-    incrementButtons[3],
-    decrementButtons[3],
-    productQuantity[3],
-)
-
-let counter5 = new Counter(
-    incrementButtons[4],
-    decrementButtons[4],
-    productQuantity[4],
-)
-
-let counter6 = new Counter(
-    incrementButtons[5],
-    decrementButtons[5],
-    productQuantity[5],
-)
-
-let counter7 = new Counter(
-    incrementButtons[6],
-    decrementButtons[6],
-    productQuantity[6],
-)
-
-let counter8 = new Counter(
-    incrementButtons[7],
-    decrementButtons[7],
-    productQuantity[7],
-)
-
-let counter9 = new Counter(
-    incrementButtons[8],
-    decrementButtons[8],
-    productQuantity[8],
-)
+let counters = [];
+productQuantity.forEach((item, i) => (
+    counters[i] = new Counter(incrementButtons[i], decrementButtons[i], item)
+))
 
 
+// function test() {
+//     console.log(this);
+// }
 
-// console.log(counter1)
+// test();
+
+function hi(surname) {
+    console.log(this);
+    console.log(this.name, surname);
+}
+
+// hi();
+
+let ivan = {
+    name: "Ivan",
+}
+
+// методы привязки контекста
+
+hi.call(ivan, "Call") // первый метод привязки контекста (нужно записывать surname как текст)
+hi.apply(ivan, ["Apply"]) // второй метод привязки контекста (нужно записывать surname как массив)
+
+let test = hi.bind(ivan, "Bind") // третий метод привязки контекста
+test()
