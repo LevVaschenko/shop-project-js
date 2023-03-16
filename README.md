@@ -6,7 +6,7 @@
 
 You can watch the site [here](https://levvaschenko.github.io/shop-project-js/) or run code with Live Server through Visual Studio Code
 
-This site uses object animation from https://kenwheeler.github.io/slick/
+This site uses object animation from https://michalsnik.github.io/aos/ and slider from https://kenwheeler.github.io/slick/
 
 The site has a shopping cart with a product counter. When you click **ADD TO CART**, the counter simply increases.
 
