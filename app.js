@@ -1,14 +1,13 @@
-let productsCount = document.getElementById("products-count") // getElementById потому что элемент один
-console.log(productsCount)
-
-let addToCartButtons = document.querySelectorAll(".add-to-cart") // querySelectorAll потому что элементов много
-console.log(addToCartButtons);
+let productsCount = document.getElementById("products-count");
+let addToCartButtons = document.querySelectorAll(".add-to-cart");
 
 addToCartButtons.forEach((item) => {
-    item.addEventListener("click", function () {
-        productsCount.textContent = +productsCount.textContent + 1;
-    });
-})
+  item.addEventListener("click", function () {
+    let quantityInput = item.closest(".buttons").previousElementSibling.querySelector("input");
+    let quantity = parseInt(quantityInput.value);
+    productsCount.textContent = parseInt(productsCount.textContent) + quantity;
+  });
+});
 
 
 let like = document.querySelectorAll(".like")
